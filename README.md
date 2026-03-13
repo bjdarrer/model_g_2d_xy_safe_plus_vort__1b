@@ -16,6 +16,8 @@ Note for Brendan only:
     python3 -m venv tf-env
     source tf-env/bin/activate
 
+ChatGPT 5.4:
+
 Built from: model_g_2d_xy_safe__2a.py (finite-difference, Dirichlet BC, solve_ivp segmented checkpoints)
 
 Adds:
