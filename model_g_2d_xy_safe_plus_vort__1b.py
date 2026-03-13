@@ -8,7 +8,7 @@ https://github.com/frostburn/tf2-model-g with https://github.com/frostburn/tf2-m
 - with ChatGPT 5.4 writing it and Brendan guiding it to produce a clean code.
 
 Install (genrally):
-  pip3 install numpy scipy matplotlib imageio imageio[ffmpeg]
+    pip3 install numpy scipy matplotlib imageio imageio[ffmpeg]
 
 Run:
     python3 model_g_2d_xy_safe_plus_vort__1b.py --reset --rotseed --quiver --vortlim 0.2
