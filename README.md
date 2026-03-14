@@ -101,6 +101,6 @@ Download: model_g_2d_xy_safe_plus_vort__1b.py (BJD: download issue, it pasted th
 Run:
     python3 model_g_2d_xy_safe_plus_vort__1b.py --reset --rotseed --quiver --vortlim 0.2
 
-If you tell me the exact command line you used when generating the MP4 you uploaded, I can confirm whether it 
+If you tell me the exact command line you used when generating the MP4 you uploaded, I can confirm 
 
-was (a) missing --rotseed, or (b) a checkpoint reuse case.
+whether it was (a) missing --rotseed, or (b) a checkpoint reuse case.
