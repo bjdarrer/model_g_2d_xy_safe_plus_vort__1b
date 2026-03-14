@@ -38,11 +38,7 @@ Outputs under out_<run_name>/:
   
 =================== UPDATED NOTES====12.3.2026 18:53 =================
 
-Brendan: I have run "model_g_2d_xy_safe_plus_vort__1a.py" (attached) recently (4 to 6 days ago). It doesn't seem
-
-to be producing a vortex (in the vortical mode), shown in the 4th plot (for quiver arrows). Can you inspect it to 
-
-see what the issue is? I attach the video output (MP4) of the plot.
+Brendan: I have run "model_g_2d_xy_safe_plus_vort__1a.py" (attached) recently (4 to 6 days ago). It doesn't seem to be producing a vortex (in the vortical mode), shown in the 4th plot (for quiver arrows). Can you inspect it to see what the issue is? I attach the video output (MP4) of the plot.
 
 ChatGPT said:
 
@@ -51,19 +47,13 @@ Thought for 5m 2s
 Yes — I can see why you’re not “getting a vortex”, even though you’re in VORT mode.
 
 What’s happening (from your MP4 + the code)
-In your MP4, the quiver arrows are mostly radial (in/out) rather than circular. That means you do have a velocity
-
-field, but it’s mostly irrotational (curl-free), so the vorticity ωz stays near zero except for small edge/shear 
-
-artifacts.
+In your MP4, the quiver arrows are mostly radial (in/out) rather than circular. That means you do have a velocity field, but it’s mostly irrotational (curl-free), so the vorticity ωz stays near zero except for small edge/shear artifacts.
 
 That matches the code:
 
 If you don’t pass --rotseed, the initial velocity is ux=uy=0.
 
-The velocity evolution is driven mainly by a pressure-gradient term -cs2 * ∇log(rho) (plus viscosity). A gradient 
-
-force like that does not naturally generate curl from a zero-curl start, so ωz tends to remain ~0.
+The velocity evolution is driven mainly by a pressure-gradient term -cs2 * ∇log(rho) (plus viscosity). A gradient force like that does not naturally generate curl from a zero-curl start, so ωz tends to remain ~0.
 
 A real “vortex” (swirl) only appears if you seed rotation (--rotseed) or drive rotation (--omega_drive). Those 
 
