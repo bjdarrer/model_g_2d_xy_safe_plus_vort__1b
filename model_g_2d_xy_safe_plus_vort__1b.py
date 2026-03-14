@@ -7,7 +7,7 @@ Model G Particle 2D (proper x–y) — SAFE base + optional vortical motion + qu
 https://github.com/frostburn/tf2-model-g with https://github.com/frostburn/tf2-model-g/blob/master/docs/overview.pdf
 - with ChatGPT 5.4 writing it and Brendan guiding it to produce a clean code.
 
-Install (genrally):
+Install (generally):
     pip3 install numpy scipy matplotlib imageio imageio[ffmpeg]
 
 Run:
